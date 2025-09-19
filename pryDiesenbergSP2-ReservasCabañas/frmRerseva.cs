@@ -12,6 +12,13 @@ namespace pryDiesenbergSP2_ReservasCabañas
 {
     public partial class frmRerseva : Form
     {
+        // constantes para los cálculos
+        private const float TIPOA = 20;
+        public const float TIPOB = 34;
+        const float COCINA = 1;
+        const float HELADERA = 1.5f;
+        const float TELEVISOR = 2;
+        const float PORPERSONA = 1;
         public frmRerseva()
         {
             InitializeComponent();
@@ -35,6 +42,11 @@ namespace pryDiesenbergSP2_ReservasCabañas
         private void txtNumeroTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void txtTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

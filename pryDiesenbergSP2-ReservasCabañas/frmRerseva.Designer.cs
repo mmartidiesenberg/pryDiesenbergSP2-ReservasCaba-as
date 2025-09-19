@@ -35,8 +35,8 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTelefonos = new System.Windows.Forms.Label();
             this.mrcTipoCabaña = new System.Windows.Forms.GroupBox();
-            this.txtTipo = new System.Windows.Forms.ComboBox();
-            this.txtPersonas = new System.Windows.Forms.ComboBox();
+            this.cmbTipo = new System.Windows.Forms.ComboBox();
+            this.cmbPersonas = new System.Windows.Forms.ComboBox();
             this.txtDias = new System.Windows.Forms.MaskedTextBox();
             this.mrcAdicionales = new System.Windows.Forms.GroupBox();
             this.mrcPago = new System.Windows.Forms.GroupBox();
@@ -45,7 +45,7 @@
             this.chkTelevisor = new System.Windows.Forms.CheckBox();
             this.btnEfectivo = new System.Windows.Forms.RadioButton();
             this.btnTarjeta = new System.Windows.Forms.RadioButton();
-            this.txtTarjetas = new System.Windows.Forms.ComboBox();
+            this.cmbTarjetas = new System.Windows.Forms.ComboBox();
             this.mrcTitular = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNumerosTelefono = new System.Windows.Forms.MaskedTextBox();
@@ -113,8 +113,8 @@
             // mrcTipoCabaña
             // 
             this.mrcTipoCabaña.Controls.Add(this.txtDias);
-            this.mrcTipoCabaña.Controls.Add(this.txtTipo);
-            this.mrcTipoCabaña.Controls.Add(this.txtPersonas);
+            this.mrcTipoCabaña.Controls.Add(this.cmbTipo);
+            this.mrcTipoCabaña.Controls.Add(this.cmbPersonas);
             this.mrcTipoCabaña.Controls.Add(this.lblPersonas);
             this.mrcTipoCabaña.Controls.Add(this.lblTipo);
             this.mrcTipoCabaña.Controls.Add(this.blDias);
@@ -126,21 +126,28 @@
             this.mrcTipoCabaña.Text = "Tipo de Cabaña";
             this.mrcTipoCabaña.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // txtTipo
+            // cmbTipo
             // 
-            this.txtTipo.FormattingEnabled = true;
-            this.txtTipo.Location = new System.Drawing.Point(45, 34);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(110, 21);
-            this.txtTipo.TabIndex = 10;
+            this.cmbTipo.FormattingEnabled = true;
+            this.cmbTipo.Items.AddRange(new object[] {
+            "A",
+            "B"});
+            this.cmbTipo.Location = new System.Drawing.Point(45, 34);
+            this.cmbTipo.Name = "cmbTipo";
+            this.cmbTipo.Size = new System.Drawing.Size(110, 21);
+            this.cmbTipo.TabIndex = 10;
+            this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.txtTipo_SelectedIndexChanged);
             // 
-            // txtPersonas
+            // cmbPersonas
             // 
-            this.txtPersonas.FormattingEnabled = true;
-            this.txtPersonas.Location = new System.Drawing.Point(228, 34);
-            this.txtPersonas.Name = "txtPersonas";
-            this.txtPersonas.Size = new System.Drawing.Size(95, 21);
-            this.txtPersonas.TabIndex = 11;
+            this.cmbPersonas.FormattingEnabled = true;
+            this.cmbPersonas.Items.AddRange(new object[] {
+            "4",
+            "8"});
+            this.cmbPersonas.Location = new System.Drawing.Point(228, 34);
+            this.cmbPersonas.Name = "cmbPersonas";
+            this.cmbPersonas.Size = new System.Drawing.Size(95, 21);
+            this.cmbPersonas.TabIndex = 11;
             // 
             // txtDias
             // 
@@ -165,7 +172,7 @@
             // 
             // mrcPago
             // 
-            this.mrcPago.Controls.Add(this.txtTarjetas);
+            this.mrcPago.Controls.Add(this.cmbTarjetas);
             this.mrcPago.Controls.Add(this.btnEfectivo);
             this.mrcPago.Controls.Add(this.btnTarjeta);
             this.mrcPago.Controls.Add(this.lblTarjetas);
@@ -229,13 +236,13 @@
             this.btnTarjeta.Text = "&Tarjeta";
             this.btnTarjeta.UseVisualStyleBackColor = true;
             // 
-            // txtTarjetas
+            // cmbTarjetas
             // 
-            this.txtTarjetas.FormattingEnabled = true;
-            this.txtTarjetas.Location = new System.Drawing.Point(96, 79);
-            this.txtTarjetas.Name = "txtTarjetas";
-            this.txtTarjetas.Size = new System.Drawing.Size(152, 21);
-            this.txtTarjetas.TabIndex = 19;
+            this.cmbTarjetas.FormattingEnabled = true;
+            this.cmbTarjetas.Location = new System.Drawing.Point(96, 79);
+            this.cmbTarjetas.Name = "cmbTarjetas";
+            this.cmbTarjetas.Size = new System.Drawing.Size(152, 21);
+            this.cmbTarjetas.TabIndex = 19;
             // 
             // mrcTitular
             // 
@@ -308,14 +315,14 @@
         private System.Windows.Forms.Label lblTelefonos;
         private System.Windows.Forms.GroupBox mrcTipoCabaña;
         private System.Windows.Forms.MaskedTextBox txtDias;
-        private System.Windows.Forms.ComboBox txtTipo;
-        private System.Windows.Forms.ComboBox txtPersonas;
+        private System.Windows.Forms.ComboBox cmbTipo;
+        private System.Windows.Forms.ComboBox cmbPersonas;
         private System.Windows.Forms.GroupBox mrcAdicionales;
         private System.Windows.Forms.GroupBox mrcPago;
         private System.Windows.Forms.CheckBox chkTelevisor;
         private System.Windows.Forms.CheckBox chkHeladera;
         private System.Windows.Forms.CheckBox chkCocina;
-        private System.Windows.Forms.ComboBox txtTarjetas;
+        private System.Windows.Forms.ComboBox cmbTarjetas;
         private System.Windows.Forms.RadioButton btnEfectivo;
         private System.Windows.Forms.RadioButton btnTarjeta;
         private System.Windows.Forms.GroupBox mrcTitular;
