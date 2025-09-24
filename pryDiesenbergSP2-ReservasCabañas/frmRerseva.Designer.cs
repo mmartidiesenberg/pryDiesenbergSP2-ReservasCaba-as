@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRerseva));
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblPersonas = new System.Windows.Forms.Label();
             this.blDias = new System.Windows.Forms.Label();
@@ -35,20 +36,20 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTelefonos = new System.Windows.Forms.Label();
             this.mrcTipoCabaña = new System.Windows.Forms.GroupBox();
+            this.txtDias = new System.Windows.Forms.MaskedTextBox();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.cmbPersonas = new System.Windows.Forms.ComboBox();
-            this.txtDias = new System.Windows.Forms.MaskedTextBox();
             this.mrcAdicionales = new System.Windows.Forms.GroupBox();
-            this.mrcPago = new System.Windows.Forms.GroupBox();
-            this.chkCocina = new System.Windows.Forms.CheckBox();
-            this.chkHeladera = new System.Windows.Forms.CheckBox();
             this.chkTelevisor = new System.Windows.Forms.CheckBox();
+            this.chkHeladera = new System.Windows.Forms.CheckBox();
+            this.chkCocina = new System.Windows.Forms.CheckBox();
+            this.mrcPago = new System.Windows.Forms.GroupBox();
+            this.cmbTarjetas = new System.Windows.Forms.ComboBox();
             this.btnEfectivo = new System.Windows.Forms.RadioButton();
             this.btnTarjeta = new System.Windows.Forms.RadioButton();
-            this.cmbTarjetas = new System.Windows.Forms.ComboBox();
             this.mrcTitular = new System.Windows.Forms.GroupBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNumerosTelefono = new System.Windows.Forms.MaskedTextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.mrcTipoCabaña.SuspendLayout();
             this.mrcAdicionales.SuspendLayout();
@@ -126,6 +127,15 @@
             this.mrcTipoCabaña.Text = "Tipo de Cabaña";
             this.mrcTipoCabaña.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtDias
+            // 
+            this.txtDias.Location = new System.Drawing.Point(381, 35);
+            this.txtDias.Mask = "99999";
+            this.txtDias.Name = "txtDias";
+            this.txtDias.Size = new System.Drawing.Size(65, 20);
+            this.txtDias.TabIndex = 3;
+            this.txtDias.ValidatingType = typeof(int);
+            // 
             // cmbTipo
             // 
             this.cmbTipo.FormattingEnabled = true;
@@ -135,7 +145,7 @@
             this.cmbTipo.Location = new System.Drawing.Point(45, 34);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(110, 21);
-            this.cmbTipo.TabIndex = 10;
+            this.cmbTipo.TabIndex = 1;
             this.cmbTipo.SelectedIndexChanged += new System.EventHandler(this.txtTipo_SelectedIndexChanged);
             // 
             // cmbPersonas
@@ -147,16 +157,7 @@
             this.cmbPersonas.Location = new System.Drawing.Point(228, 34);
             this.cmbPersonas.Name = "cmbPersonas";
             this.cmbPersonas.Size = new System.Drawing.Size(95, 21);
-            this.cmbPersonas.TabIndex = 11;
-            // 
-            // txtDias
-            // 
-            this.txtDias.Location = new System.Drawing.Point(381, 35);
-            this.txtDias.Mask = "99999";
-            this.txtDias.Name = "txtDias";
-            this.txtDias.Size = new System.Drawing.Size(65, 20);
-            this.txtDias.TabIndex = 12;
-            this.txtDias.ValidatingType = typeof(int);
+            this.cmbPersonas.TabIndex = 2;
             // 
             // mrcAdicionales
             // 
@@ -169,6 +170,37 @@
             this.mrcAdicionales.TabIndex = 13;
             this.mrcAdicionales.TabStop = false;
             this.mrcAdicionales.Text = "Adicionales";
+            // 
+            // chkTelevisor
+            // 
+            this.chkTelevisor.AutoSize = true;
+            this.chkTelevisor.Location = new System.Drawing.Point(19, 83);
+            this.chkTelevisor.Name = "chkTelevisor";
+            this.chkTelevisor.Size = new System.Drawing.Size(69, 17);
+            this.chkTelevisor.TabIndex = 6;
+            this.chkTelevisor.Text = "&Televisor";
+            this.chkTelevisor.UseVisualStyleBackColor = true;
+            this.chkTelevisor.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // chkHeladera
+            // 
+            this.chkHeladera.AutoSize = true;
+            this.chkHeladera.Location = new System.Drawing.Point(19, 51);
+            this.chkHeladera.Name = "chkHeladera";
+            this.chkHeladera.Size = new System.Drawing.Size(69, 17);
+            this.chkHeladera.TabIndex = 5;
+            this.chkHeladera.Text = "&Heladera";
+            this.chkHeladera.UseVisualStyleBackColor = true;
+            // 
+            // chkCocina
+            // 
+            this.chkCocina.AutoSize = true;
+            this.chkCocina.Location = new System.Drawing.Point(19, 19);
+            this.chkCocina.Name = "chkCocina";
+            this.chkCocina.Size = new System.Drawing.Size(59, 17);
+            this.chkCocina.TabIndex = 4;
+            this.chkCocina.Text = "&Cocina";
+            this.chkCocina.UseVisualStyleBackColor = true;
             // 
             // mrcPago
             // 
@@ -183,36 +215,13 @@
             this.mrcPago.TabStop = false;
             this.mrcPago.Text = "Forma de Pago";
             // 
-            // chkCocina
+            // cmbTarjetas
             // 
-            this.chkCocina.AutoSize = true;
-            this.chkCocina.Location = new System.Drawing.Point(19, 19);
-            this.chkCocina.Name = "chkCocina";
-            this.chkCocina.Size = new System.Drawing.Size(59, 17);
-            this.chkCocina.TabIndex = 14;
-            this.chkCocina.Text = "&Cocina";
-            this.chkCocina.UseVisualStyleBackColor = true;
-            // 
-            // chkHeladera
-            // 
-            this.chkHeladera.AutoSize = true;
-            this.chkHeladera.Location = new System.Drawing.Point(19, 51);
-            this.chkHeladera.Name = "chkHeladera";
-            this.chkHeladera.Size = new System.Drawing.Size(69, 17);
-            this.chkHeladera.TabIndex = 15;
-            this.chkHeladera.Text = "&Heladera";
-            this.chkHeladera.UseVisualStyleBackColor = true;
-            // 
-            // chkTelevisor
-            // 
-            this.chkTelevisor.AutoSize = true;
-            this.chkTelevisor.Location = new System.Drawing.Point(19, 83);
-            this.chkTelevisor.Name = "chkTelevisor";
-            this.chkTelevisor.Size = new System.Drawing.Size(69, 17);
-            this.chkTelevisor.TabIndex = 16;
-            this.chkTelevisor.Text = "&Televisor";
-            this.chkTelevisor.UseVisualStyleBackColor = true;
-            this.chkTelevisor.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            this.cmbTarjetas.FormattingEnabled = true;
+            this.cmbTarjetas.Location = new System.Drawing.Point(96, 79);
+            this.cmbTarjetas.Name = "cmbTarjetas";
+            this.cmbTarjetas.Size = new System.Drawing.Size(152, 21);
+            this.cmbTarjetas.TabIndex = 9;
             // 
             // btnEfectivo
             // 
@@ -220,7 +229,7 @@
             this.btnEfectivo.Location = new System.Drawing.Point(6, 19);
             this.btnEfectivo.Name = "btnEfectivo";
             this.btnEfectivo.Size = new System.Drawing.Size(64, 17);
-            this.btnEfectivo.TabIndex = 17;
+            this.btnEfectivo.TabIndex = 7;
             this.btnEfectivo.TabStop = true;
             this.btnEfectivo.Text = "&Efectivo";
             this.btnEfectivo.UseVisualStyleBackColor = true;
@@ -228,21 +237,13 @@
             // btnTarjeta
             // 
             this.btnTarjeta.AutoSize = true;
-            this.btnTarjeta.Location = new System.Drawing.Point(10, 51);
+            this.btnTarjeta.Location = new System.Drawing.Point(6, 51);
             this.btnTarjeta.Name = "btnTarjeta";
             this.btnTarjeta.Size = new System.Drawing.Size(58, 17);
-            this.btnTarjeta.TabIndex = 18;
+            this.btnTarjeta.TabIndex = 8;
             this.btnTarjeta.TabStop = true;
             this.btnTarjeta.Text = "&Tarjeta";
             this.btnTarjeta.UseVisualStyleBackColor = true;
-            // 
-            // cmbTarjetas
-            // 
-            this.cmbTarjetas.FormattingEnabled = true;
-            this.cmbTarjetas.Location = new System.Drawing.Point(96, 79);
-            this.cmbTarjetas.Name = "cmbTarjetas";
-            this.cmbTarjetas.Size = new System.Drawing.Size(152, 21);
-            this.cmbTarjetas.TabIndex = 19;
             // 
             // mrcTitular
             // 
@@ -257,20 +258,20 @@
             this.mrcTitular.TabStop = false;
             this.mrcTitular.Text = "Titular de la Reserva";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(103, 29);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(343, 20);
-            this.txtNombre.TabIndex = 18;
-            // 
             // txtNumerosTelefono
             // 
             this.txtNumerosTelefono.Location = new System.Drawing.Point(103, 72);
             this.txtNumerosTelefono.Mask = "(999)000-0000";
             this.txtNumerosTelefono.Name = "txtNumerosTelefono";
             this.txtNumerosTelefono.Size = new System.Drawing.Size(343, 20);
-            this.txtNumerosTelefono.TabIndex = 19;
+            this.txtNumerosTelefono.TabIndex = 11;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(103, 29);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(343, 20);
+            this.txtNombre.TabIndex = 10;
             // 
             // btnAceptar
             // 
@@ -278,7 +279,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(415, 401);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(92, 37);
-            this.btnAceptar.TabIndex = 20;
+            this.btnAceptar.TabIndex = 12;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
@@ -292,6 +293,7 @@
             this.Controls.Add(this.mrcAdicionales);
             this.Controls.Add(this.mrcPago);
             this.Controls.Add(this.mrcTipoCabaña);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRerseva";
             this.Text = "Reserva de Cabañas";
             this.mrcTipoCabaña.ResumeLayout(false);
