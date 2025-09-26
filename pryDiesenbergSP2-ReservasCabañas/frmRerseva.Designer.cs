@@ -139,6 +139,7 @@
             // 
             // cmbTipo
             // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "A",
@@ -218,6 +219,7 @@
             // 
             // cmbTarjetas
             // 
+            this.cmbTarjetas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTarjetas.FormattingEnabled = true;
             this.cmbTarjetas.Location = new System.Drawing.Point(96, 79);
             this.cmbTarjetas.Name = "cmbTarjetas";
