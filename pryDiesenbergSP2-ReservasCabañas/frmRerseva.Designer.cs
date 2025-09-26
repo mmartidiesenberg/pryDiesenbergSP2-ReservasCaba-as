@@ -296,6 +296,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRerseva";
             this.Text = "Reserva de Cabañas";
+            this.Load += new System.EventHandler(this.frmRerseva_Load);
             this.mrcTipoCabaña.ResumeLayout(false);
             this.mrcTipoCabaña.PerformLayout();
             this.mrcAdicionales.ResumeLayout(false);

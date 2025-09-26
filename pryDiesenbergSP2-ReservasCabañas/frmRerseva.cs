@@ -48,5 +48,10 @@ namespace pryDiesenbergSP2_ReservasCabañas
         {
             
         }
+
+        private void frmRerseva_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
