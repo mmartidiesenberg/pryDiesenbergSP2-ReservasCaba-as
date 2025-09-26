@@ -135,6 +135,7 @@
             this.txtDias.Size = new System.Drawing.Size(65, 20);
             this.txtDias.TabIndex = 3;
             this.txtDias.ValidatingType = typeof(int);
+            this.txtDias.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtDias_MaskInputRejected);
             // 
             // cmbTipo
             // 
@@ -233,6 +234,7 @@
             this.btnEfectivo.TabStop = true;
             this.btnEfectivo.Text = "&Efectivo";
             this.btnEfectivo.UseVisualStyleBackColor = true;
+            this.btnEfectivo.CheckedChanged += new System.EventHandler(this.btnEfectivo_CheckedChanged);
             // 
             // btnTarjeta
             // 
@@ -244,6 +246,7 @@
             this.btnTarjeta.TabStop = true;
             this.btnTarjeta.Text = "&Tarjeta";
             this.btnTarjeta.UseVisualStyleBackColor = true;
+            this.btnTarjeta.CheckedChanged += new System.EventHandler(this.btnTarjeta_CheckedChanged);
             // 
             // mrcTitular
             // 
@@ -265,6 +268,7 @@
             this.txtNumerosTelefono.Name = "txtNumerosTelefono";
             this.txtNumerosTelefono.Size = new System.Drawing.Size(343, 20);
             this.txtNumerosTelefono.TabIndex = 11;
+            this.txtNumerosTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtNumerosTelefono_MaskInputRejected);
             // 
             // txtNombre
             // 
@@ -272,6 +276,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(343, 20);
             this.txtNombre.TabIndex = 10;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // btnAceptar
             // 
@@ -282,6 +287,7 @@
             this.btnAceptar.TabIndex = 12;
             this.btnAceptar.Text = "&Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // frmRerseva
             // 
@@ -296,6 +302,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRerseva";
             this.Text = "Reserva de Cabañas";
+            this.Load += new System.EventHandler(this.frmRerseva_Load);
             this.mrcTipoCabaña.ResumeLayout(false);
             this.mrcTipoCabaña.PerformLayout();
             this.mrcAdicionales.ResumeLayout(false);
