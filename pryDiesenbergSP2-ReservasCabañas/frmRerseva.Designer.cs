@@ -135,6 +135,7 @@
             // 
             // txtDias
             // 
+            this.txtDias.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtDias.Location = new System.Drawing.Point(381, 35);
             this.txtDias.Mask = "99999";
             this.txtDias.Name = "txtDias";
@@ -145,6 +146,7 @@
             // 
             // cmbTipo
             // 
+            this.cmbTipo.BackColor = System.Drawing.Color.LavenderBlush;
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
@@ -158,6 +160,7 @@
             // 
             // cmbPersonas
             // 
+            this.cmbPersonas.BackColor = System.Drawing.Color.LavenderBlush;
             this.cmbPersonas.FormattingEnabled = true;
             this.cmbPersonas.Items.AddRange(new object[] {
             "4",
@@ -271,6 +274,7 @@
             // 
             // txtNumerosTelefono
             // 
+            this.txtNumerosTelefono.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtNumerosTelefono.Location = new System.Drawing.Point(103, 72);
             this.txtNumerosTelefono.Mask = "(999)000-0000";
             this.txtNumerosTelefono.Name = "txtNumerosTelefono";
@@ -280,6 +284,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.BackColor = System.Drawing.Color.LavenderBlush;
             this.txtNombre.Location = new System.Drawing.Point(103, 29);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(343, 20);
@@ -310,6 +315,7 @@
             // 
             // dgvDatos
             // 
+            this.dgvDatos.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colTipo,
