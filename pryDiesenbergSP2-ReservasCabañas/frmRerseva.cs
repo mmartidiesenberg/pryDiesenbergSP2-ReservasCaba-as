@@ -170,9 +170,9 @@ namespace pryDiesenbergSP2_ReservasCabañas
                 float Recargo;
                 int Dias;
                 float Total;
-           
+
                 Dias = int.Parse(txtDias.Text);
-           
+
                 if (cmbTipo.SelectedIndex == 0)
                 {
                     PrecioBase = tipoa;
@@ -181,9 +181,9 @@ namespace pryDiesenbergSP2_ReservasCabañas
                 {
                     PrecioBase = tipob;
                 }
-            
+
                 PrecioBase = PrecioBase + (porpersona * int.Parse(cmbPersonas.Text));
-          
+
                 Opcionales = 0;
                 if (chkCocina.Checked == true)
                 {
@@ -197,9 +197,9 @@ namespace pryDiesenbergSP2_ReservasCabañas
                 {
                     Opcionales = Opcionales + televisor;
                 }
-       
+
                 Total = (PrecioBase + Opcionales) * Dias;
-    
+
                 if (btnTarjeta.Checked == true)
                 {
                     if (cmbTarjetas.SelectedIndex == 0)
@@ -212,10 +212,14 @@ namespace pryDiesenbergSP2_ReservasCabañas
                     }
                     Total = Total + Recargo;
                 }
-           
+
                 MessageBox.Show("Total = " + Total.ToString(), "Importe de la reserva",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-          
+
+                LimpiarUI();
+            }
+            void LimpiarUI()
+            { 
                 cmbTipo.SelectedIndex = 0;
                 txtDias.Text = "1";
                 chkCocina.Checked = false;
@@ -226,6 +230,11 @@ namespace pryDiesenbergSP2_ReservasCabañas
                 txtNombre.Text = "";
                 txtNumerosTelefono.Text = "";
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();   
         }
     }
 }
