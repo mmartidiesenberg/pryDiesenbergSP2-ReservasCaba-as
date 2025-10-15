@@ -20,11 +20,11 @@ namespace pryDiesenbergSP2_ReservasCabañas
         const float televisor = 2;
         const float porpersona = 1;
         
-        struct Reserva
+        public struct Reserva
         {
-            string tipo;
-            int cantidad;
-            int dias;
+            public string tipo;
+            public int cantidad;
+            public int dias;
         }
 
         Reserva vecReserva = new Reserva();
