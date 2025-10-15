@@ -19,6 +19,18 @@ namespace pryDiesenbergSP2_ReservasCabañas
         const float heladera = 1.5f;
         const float televisor = 2;
         const float porpersona = 1;
+        
+        struct Reserva
+        {
+            string tipo;
+            int cantidad;
+            int dias;
+        }
+
+        Reserva vecReserva = new Reserva();
+
+        string[,] matReserva = new string[3,3];
+        int indiceFila = 0;
         public frmRerseva()
         {
             InitializeComponent();
@@ -165,6 +177,12 @@ namespace pryDiesenbergSP2_ReservasCabañas
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             {
+                matReserva[indiceFila, 0] = cmbTipo.Text;
+                matReserva[indiceFila, 1] = cmbPersonas.Text;
+                matReserva[indiceFila, 2] = txtDias.Text;
+
+                indiceFila++;
+
                 float PrecioBase;
                 float Opcionales;
                 float Recargo;
