@@ -354,6 +354,7 @@
             this.Controls.Add(this.mrcAdicionales);
             this.Controls.Add(this.mrcPago);
             this.Controls.Add(this.mrcTipoCabaña);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRerseva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
